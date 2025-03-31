@@ -9,8 +9,43 @@ raz. Na przykład dla liczb 5 i 2 oraz znaku / (dzielenie) trzeba wyświetlić 5
 ponieważ dają różny wynik.
 '''
 
-list=[]
 
-def math_operation(a,b):
-    operation_sign = input("Select one operation sign: multiplication (*) / division (/) / subtraction (-) / addition(+)")
+def math_operation(a,b,c):
+    if c == '+':
+        result = a+b
+        print(f"{a} {c} {b} = {result}!")
+    elif c=='-':
+        result=a-b
+        result_2=b-a
+        if result!=result_2:
+            print(f"{a} {c} {b} = {result}")
+            print(f"{b} {c} {a} = {result_2}")
+        else:
+            print(f"{a} {c} {b} ={result}")
+    elif c=='/':
+        try:
+            result=a/b
+            result_2=b/a
+            if result != result_2:
+                print(f"{a} {c} {b} = {result}")
+                print(f"{b} {c} {c} = {result_2}")
+            else:
+                print(f"{a} {c} {b} = {result}")
+        except:
+            print("You can't divide by 0 !!")
+    elif c=='*':
+        result=a*b
+        print(f"{a} {c} {b} = {result}")
+    return
 
+try:
+    numbers=[]
+    numebr_1 = float(input("Provide first (a) float number: "))
+    numbers.append(numebr_1)
+    number_2 = float(input("Provide second (b) float number: "))
+    numbers.append(number_2)
+    operation_sign = input("Provide one operation sign: multiplication (*) / division (/) / subtraction (-) / addition(+): ")
+
+    math_operation(numebr_1,number_2,operation_sign)
+except ValueError:
+    print("You enter incorrect values or operation sign!!")
