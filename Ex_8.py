@@ -23,29 +23,32 @@ def math_operation(a,b,c):
         else:
             print(f"{a} {c} {b} ={result}")
     elif c=='/':
-        try:
+        if a !=0 and b!=0:
             result=a/b
             result_2=b/a
             if result != result_2:
                 print(f"{a} {c} {b} = {result}")
-                print(f"{b} {c} {c} = {result_2}")
+                print(f"{b} {c} {a} = {result_2}")
             else:
                 print(f"{a} {c} {b} = {result}")
-        except:
-            print("You can't divide by 0 !!")
+        elif a==0 and b!=0:
+            result=a/b
+            print(f"{a} {c} {b} = {result}")
+        elif b==0 and a!=0:
+            result=b/a
+            print(f"{b} {c} {a} = {result}")
+        else:
+            print("Check if a = 0 and b = 0 / You can't divide by 0 !!")
     elif c=='*':
         result=a*b
         print(f"{a} {c} {b} = {result}")
     return
 
 try:
-    numbers=[]
     numebr_1 = float(input("Provide first (a) float number: "))
-    numbers.append(numebr_1)
     number_2 = float(input("Provide second (b) float number: "))
-    numbers.append(number_2)
     operation_sign = input("Provide one operation sign: multiplication (*) / division (/) / subtraction (-) / addition(+): ")
-
+    print(f"You enter numbers a = {numebr_1}, b ={number_2}")
     math_operation(numebr_1,number_2,operation_sign)
 except ValueError:
     print("You enter incorrect values or operation sign!!")
