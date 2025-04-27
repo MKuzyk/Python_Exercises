@@ -1,10 +1,20 @@
 sequence = []
 
+# Początkowa wartość
+current_value = 100
+decrement = 1
+
 # Generujemy 100 elementów ciągu
-n = 1
-while len(sequence) < 100:
-    sequence.extend([n] * n)
-    n += 1
+for i in range(100):
+    sequence.append(current_value)
+    current_value -= decrement
+    decrement += 1  # Zwiększamy spadek o 1 w każdej iteracji
+
+# Ostatni (setny) element ciągu
+last_element = sequence[-1]
 
 # Wyświetlamy pierwsze 100 elementów
-print(sequence[:100])
+print(sequence)
+
+# Wyświetlamy ostatni element
+print(f"Ostatni (setny) element ciągu: {last_element}")
