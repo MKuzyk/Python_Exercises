@@ -14,4 +14,5 @@ while len(list)<10:
     else:
         print("Number is already in the list!")
 
+
 print("Gotowa lista: ",list)

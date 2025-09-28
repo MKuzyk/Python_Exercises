@@ -8,12 +8,16 @@ from collections import Counter
 
 list=[1,2,4,3,6,8,7,7,8,3,4,5,6,7,1,3,9,1,0,4,2,3,6,9]
 
+#1
+
 print("Trójelementowe podciągi niemalejące: a<=b<=c")
 
 for i in range(len(list)-2):
     a,b,c=list[i],list[i+1],list[i+2]
     if a<=b<=c:
         print([a,b,c])
+
+#2
 
 longest_list=[]
 actual=[list[0]]
@@ -32,6 +36,8 @@ if len(actual) > len(longest_list):
 print("Najdłuższy podciąg niemalejący: ",longest_list)
 
 element_count=Counter(list)
+
+#3
 
 print("liczba wystąpień każdej cyfry: ")
 

@@ -8,6 +8,7 @@ również ten iloczyn do listy V i wróć do punktu 1., a jeżeli ten iloczyn pr
 wartość 1000, zakończ pętlę [1].
 Pokaż listę po wyjściu z pętli.'''
 
+
 list=[]
 
 while True:

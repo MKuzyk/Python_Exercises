@@ -9,7 +9,6 @@ vowels = 'aeiouy'
 
 while True:
     char=str(input("Podaj znak: "))
-
     if char == "!":
         break
     elif char =="*":
